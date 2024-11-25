@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>College Admissions Form</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <style>
+    body {
+      background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('background.jpg');
+      background-size: cover;
+      background-attachment: fixed;
+      color: #f8f9fa;
+      font-family: 'Roboto', sans-serif;
+    }
+
+
+    .navbar {
+      background-color: rgba(0, 0, 0, 0.7);
+    }
+
+    .navbar a {
+      transition: color 0.3s ease;
+    }
+
+    .navbar a:hover {
+      color: #3e22d8;
+    }
+
+    .navbar-brand img {
+      height: 40px;
+      width: 40px;
+      border-radius: 50%;
+    }
+
+    .form-container {
+      max-width: 900px;
+      margin: 20px auto;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.7);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    h1 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      font-weight: bold;
+      margin-top: 5px;
+      
+    }
+
+    .smaller-label {
+      font-size: 12px;
+      font-weight: normal;
+    }
+    .big-label {
+      font-size: 20px;
+      font-weight: normal;
+    }
+
+    input, select, button {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      box-sizing: border-box;
+    }
+
+    .radio-group {
+      display: flex;
+      justify-content: start;
+      gap: 15px;
+    }
+
+    .radio-group input {
+      width: auto;
+      margin-top: 0;
+    }
+
+    .group {
+      display: flex;
+      gap: 10px;
+    }
+
+    .group div {
+      flex: 1;
+    }
+
+    button {
+      background-color: #3e22d8;
+      color: #fff;
+      font-size: 12px; /* Smaller font size */
+      font-weight: bold;
+      padding: 6px 12px; /* Reduced padding */
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: block;
+      margin-left: auto; /* Align to the right */
+      width: auto; /* Allow button to resize based on content */
+    }
+
+    button:hover {
+      background-color: #2d1b9d;
+      transform: translateY(-3px);
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    button:active {
+      background-color: #1f137a;
+      transform: translateY(1px);
+    }
+
+    .name-group div, .group div {
+      margin-bottom: 10px;
+    }
+
+    input[type="text"], input[type="email"], input[type="tel"], select {
+      margin-top: 0;
+    }
+
+    .group div input + label,
+    .name-group div input + label {
+      margin-top: 0;
+    }
+
+    .hero-section {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 20px;
+      padding: 60px 10%;
+      text-align: center;
+    }
+
+    .hero-section h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin: 0;
+      color: #ffffff;
+    }
+    .radio-group input {
+      width: auto;
+      margin-top: 0;
+      }
+    .hero-section p {
+      font-size: 1.2rem;
+      margin: 0;
+      color: #ffffff;
+    }
+
+    
+    @media (max-width: 768px) {
+      .hero-section h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand text-white" href="#">
+        <img src="hgb logo.jpg" alt="Logo"> HGBaquiran College
+      </a>
+      <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link text-white" href="../mainpage/mainpage.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="../content/About.html">About</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="../content/Contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+  <div class="form-container">
+    <h1>College Admissions Form</h1>
+    <p style="text-align: center;">Enter your admission information below</p>
+    <hr>
+    <form>
+      <label class="big-label">Name</label><br>
+      <div class="name-group group">
+        <div>
+          <input type="text" placeholder="First Name">
+          <label class="smaller-label">First Name</label>
+        </div>
+        <div>
+          <input type="text" placeholder="Middle Initial">
+          <label class="smaller-label">Middle Initial</label>
+        </div>
+        <div>
+          <input type="text" placeholder="Last Name">
+          <label class="smaller-label">Last Name</label>
+        </div>
+      </div>
+
+      <label class="big-label">Birth Date</label><br>
+      <div class="group">
+        <div>
+          <select>
+            <option>Select a Month</option>
+          </select>
+          <label class="smaller-label">Month</label>
+        </div>
+        <div>
+          <select>
+            <option>Select a Day</option>
+          </select>
+          <label class="smaller-label">Day</label>
+        </div>
+        <div>
+          <select>
+            <option>Select a Year</option>
+          </select>
+          <label class="smaller-label">Year</label>
+        </div>
+      </div>
+
+      <div class="group">
+        <div>
+          <label class="big-label">Gender</label><br>
+          <div class="radio-group">
+            <label><input type="radio" name="gender"> Male</label>
+            <label><input type="radio" name="gender"> Female</label>
+          </div>
+        </div>
+        <div>
+          <label class="big-label">Country of Citizenship</label><br>
+          <select>
+            <option>Select Country</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="group">
+        <div>
+          <label class="big-label">Phone</label><br>
+          <input type="text" placeholder="(000) 000-0000">
+        </div>
+        <div>
+          <label class="big-label">Email Address</label><br>
+          <input type="email" placeholder="example@example.com">
+        </div>
+      </div>
+
+      <label class="big-label">Mailing Address</label><br>
+      <input type="text"><br>
+      <label class="smaller-label">Street Address</label><br>
+      <input type="text"><br>
+      <label class="smaller-label">Street Address Line 2</label><br>
+
+      <div class="group">
+        <div>
+          <input type="text" placeholder="City">
+          <label class="smaller-label">City</label><br>
+        </div>
+        <div>
+          <input type="text" placeholder="State / Province"><br>
+          <label class="smaller-label">State / Province</label>
+        </div>
+      </div>
+
+      <input type="text" placeholder="Postal / Zip Code">
+      <label class="smaller-label">Postal / Zip Code</label><br>
+
+      <label class="big-label">Emergency Contact</label><br>
+      <div class="group">
+        <div>
+          <input type="text" placeholder="First Name">
+          <label class="smaller-label">First Name</label>
+        </div>
+        <div>
+          <input type="text" placeholder="Last Name">
+          <label class="smaller-label">Last Name</label>
+        </div>
+        <div>
+          <input type="text" placeholder="Relationship">
+          <label class="smaller-label">Relationship</label>
+        </div>
+      </div>
+
+      <div class="group">
+        <div>
+          <label class="big-label">Email</label><br>
+          <input type="email" placeholder="email@example.com">
+        </div>
+        <div>
+          <label class="big-label">Phone Number</label><br>
+          <input type="tel" placeholder="(000) 000-0000">
+        </div>
+      </div>
+
+      <label class="big-label">Do you speak any languages other than English?</label><br>
+      <div class="radio-group">
+        <label><input type="radio" name="languages"> Yes</label>
+        <label><input type="radio" name="languages"> No</label>
+      </div>
+      <a href="../enroll/enroll1.html">
+        <button type="button">Next</button>
+      </a>
+      
+    </form>
+  </div>
+</body>
+</html>

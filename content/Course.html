@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('background.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            color: #f8f9fa;
+            font-family: 'Roboto', sans-serif;
+        }
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .navbar a {
+            transition: color 0.3s ease;
+        }
+        .navbar a:hover {
+            color: #3e22d8;
+        }
+        .navbar-brand img {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+        }
+        .hero-section {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            padding: 60px 10%;
+            text-align: center;
+        }
+        .hero-section h1 {
+            font-size: 2.5rem; 
+            font-weight: 700;
+            margin: 0;
+            color: #ffffff;
+        }
+        .hero-section p {
+            font-size: 1.2rem; 
+            margin: 0;
+            color: #ffffff;
+        }
+        .info-cards {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); 
+            gap: 20px; 
+            padding: 20px;
+        }
+        .card-container {
+            perspective: 1000px; /* Enables 3D perspective for card flipping */
+        }
+        .card {
+            width: 100%;
+            height: 250px;
+            position: relative;
+            transform-style: preserve-3d;
+            transition: transform 0.6s;
+            background-color: rgba(0, 0, 0, 0.3); /* Make card background slightly transparent */
+        }
+        .card:hover {
+            transform: rotateY(180deg);
+            background-color: rgba(0, 0, 0, 0.5); /* Slightly darken card on hover */
+        }
+        .card-face {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            backface-visibility: hidden;
+            border-radius: 10px; 
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7); /* Slight shadow for contrast */
+        }
+        .card-face.front {
+            background-color: rgba(0, 0, 0, 0.3); /* Transparent background */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.3s ease;
+        }
+        .card:hover .card-face.front {
+            background-color: rgba(0, 0, 0, 0.4); /* Slightly darken front on hover */
+        }
+        .card-face.back {
+            background-color: rgba(0, 0, 0, 0.5); /* Transparent but darker back */
+            color: #ddd;
+            text-align: center;
+            transform: rotateY(180deg);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 15px;
+        }
+        .card img {
+            width: 60%; /* Adjust the width of the image */
+            height: auto; /* Keep proportions */
+            margin-bottom: 15px;
+        }
+        .card h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin: 0;
+            color: #fff;
+            text-align: center;
+        }
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2rem; 
+            }
+            .info-cards {
+                grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); 
+            }
+        }
+    </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand text-white" href="#">
+            <img src="hgb logo.jpg" alt="Logo"> HGBaquiran College
+        </a>
+        <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link text-white" href="../mainpage/mainpage.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="../content/About.html">About</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="../content/Contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+  </nav>
+
+<section class="hero-section">
+    <h1 class="display-4">Courses</h1><br>
+    <p class="lead">Explore our various programs and choose your path.</p>
+</section>
+
+<section class="info-cards">
+    <div class="card-container">
+        <div class="card">
+            <div class="card-face front">
+                <img src="B.E.webp" alt="Elementary Education">
+                <h3>Elementary Education</h3>
+            </div>
+            <div class="card-face back">
+                <p>Focuses on teaching young children foundational skills in reading, writing, math, and social studies, with an emphasis on child development and classroom strategies.</p>
+            </div>
+        </div>
+    </div>
+    <div class="card-container">
+        <div class="card">
+            <div class="card-face front">
+                <img src="BCRIM.webp" alt="College of Criminology">
+                <h3>College of Criminology</h3>
+            </div>
+            <div class="card-face back">
+                <p>Centers on understanding crime, criminal behavior, and law enforcement, including forensics, psychology, and investigation techniques.</p>
+            </div>
+        </div>
+    </div>
+    <div class="card-container">
+        <div class="card">
+            <div class="card-face front">
+                <img src="I.T.webp" alt="Information Technology">
+                <h3>Information Technology</h3>
+            </div>
+            <div class="card-face back">
+                <p>Explores computing systems, software development, cybersecurity, and network management for modern digital solutions.</p>
+            </div>
+        </div>
+    </div>
+    <div class="card-container">
+        <div class="card">
+            <div class="card-face front">
+                <img src="H.M.webp" alt="Hospitality Management">
+                <h3>Hospitality Management</h3>
+            </div>
+            <div class="card-face back">
+                <p>Covers the service industry, focusing on customer service, event planning, and tourism operations in hotels and restaurants.</p>
+            </div>
+        </div>
+    </div>
+    <div class="card-container">
+        <div class="card">
+            <div class="card-face front">
+                <img src="B.A.webp" alt="Business Administration">
+                <h3>Business Administration</h3>
+            </div>
+            <div class="card-face back">
+                <p>Delivers expertise in managing organizations effectively, emphasizing marketing, finance, and entrepreneurship.</p>
+            </div>
+        </div>
+    </div>
+    <div class="card-container">
+        <div class="card">
+            <div class="card-face front">
+                <img src="B.E2.webp" alt="Secondary Education">
+                <h3>Secondary Education</h3>
+            </div>
+            <div class="card-face back">
+                <p>Prepares individuals to teach specialized subjects to high school students, incorporating adolescent psychology and effective teaching methods.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+</body>
+</html>

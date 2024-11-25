@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('background.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            color: #f8f9fa;
+            font-family: 'Roboto', sans-serif;
+        }
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+        .nav {
+            position: absolute;
+            width: 100%;
+            z-index: 10;
+        }
+        .navbar-brand img {
+            height: 50px;
+            width: 50px;
+            border-radius: 50%; 
+        }
+        #about-section {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            padding: 60px 10%;
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        .about-left {
+            position: relative;
+        }
+        .about-left iframe {
+            width: 100%;
+            height: 400px; 
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+        }
+        .about-left h1 {
+            font-family: 'Poppins', sans-serif;
+            font-size: 32px; 
+            font-weight: 600;
+            color: #3e22d8;
+            position: absolute;
+
+            left: 50%;
+            transform: translateX(-50%);
+            margin: 0;
+            text-align: center;
+        }
+        .about-right {
+            display: flex;
+            flex-direction: column;
+        }
+        .about-right h3 {
+            color: #3e22d8;
+            font-size: 28px;
+            margin-bottom: 10px;
+        }
+        .about-right p {
+            color: #f2f2f2;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+        .about-right .address {
+            margin-top: 30px;
+        }
+        .about-right .address ul li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .address .address-logo {
+            margin-right: 10px;
+            color: #3e22d8;
+        }
+        .saprater {
+            margin: 0 15px;
+        }
+        .address-logo i {
+            font-size: 18px;
+        }
+        
+        @media (max-width: 768px) {
+            #about-section {
+                grid-template-columns: 1fr;
+                padding: 40px 10%;
+            }
+            .about-left iframe {
+                max-width: 80%;
+                margin-bottom: 20px;
+                height: 350px; 
+            }
+            .about-right {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg">
+    <div class="container">
+        <a class="navbar-brand text-white" href="#">
+            <img src="hgb logo.jpg" alt="Logo"> HGBaquiran College
+        </a>
+        <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link text-white" href="../mainpage/mainpage.html">Home</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="../content/Course.html">Course</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="../content/Contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section id="about-section">
+    <div class="about-left">
+        <iframe src="https://www.youtube.com/embed/nNEd5Emi-sE" 
+                title="HGBC Hymn" 
+                frameborder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowfullscreen>
+        </iframe>
+        <h1>HGBC Hymn</h1>
+    </div>
+
+    <div class="about-right">
+        <h3>Mission</h3>
+        <p>Our Mission is to provide high-quality education that fosters personal growth, critical thinking, and lifelong learning. We are committed to nurturing well-rounded individuals who are prepared to face the challenges of a rapidly changing world.</p>
+
+        <h3>Vision</h3>
+        <p>We envision a community of learners where students are empowered to reach their full potential and become leaders in their chosen fields. HGBaquiran College aims to be recognized for academic excellence, innovative teaching, and impactful community engagement.</p>
+
+        <h3>Core Values</h3>
+        <p>Dedication, Diligence, Determination, Devotion, and Discipline.</p>
+    </div>
+</section>
+
+</body>
+</html>

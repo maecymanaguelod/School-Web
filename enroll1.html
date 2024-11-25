@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <style>
+        body {
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('background.jpg');
+            background-size: cover;
+            background-attachment: fixed;
+            color: #f8f9fa;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .navbar {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
+
+        .navbar a {
+            transition: color 0.3s ease;
+        }
+
+        .navbar a:hover {
+            color: #3e22d8;
+        }
+
+        .navbar-brand img {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+        }
+
+        .form-container {
+            max-width: 900px;
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
+        .smaller-label {
+            font-size: 12px;
+            font-weight: normal;
+        }
+        .big-label {
+            font-size: 20px;
+            font-weight: normal;
+        }
+
+        input, select, button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            margin-bottom: 5px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .radio-group {
+            display: flex;
+            justify-content: start;
+            gap: 15px;
+        }
+
+        .radio-group input {
+            width: auto;
+            margin-top: 0;
+        }
+
+        .group {
+            display: flex;
+            gap: 10px;
+        }
+
+        .group div {
+            flex: 1;
+        }
+
+        button {
+            background-color: #3e22d8;
+            color: #fff;
+            font-size: 12px;
+            font-weight: bold;
+            padding: 6px 12px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: block;
+            margin-left: auto;
+            width: auto;
+        }
+
+        button:hover {
+            background-color: #2d1b9d;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        button:active {
+            background-color: #1f137a;
+            transform: translateY(1px);
+        }
+
+        .name-group div, .group div {
+            margin-bottom: 10px;
+        }
+
+        .hero-section {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+            padding: 60px 10%;
+            text-align: center;
+        }
+
+        .hero-section h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0;
+            color: #ffffff;
+        }
+
+        .hero-section p {
+            font-size: 1.2rem;
+            margin: 0;
+            color: #ffffff;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section h1 {
+                font-size: 2rem;
+            }
+        }
+
+        .form-buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+
+    </style>
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg">
+    <div class="container">
+      <a class="navbar-brand text-white" href="#">
+        <img src="hgb logo.jpg" alt="Logo"> HGBaquiran College
+      </a>
+      <button class="navbar-toggler text-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link text-white" href="../mainpage/mainpage.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="../content/About.html">About</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="../content/Contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+
+  <div class="form-container">
+
+    <h1>Education</h1>
+    <p style="text-align: center;">Enter your educational information below</p>
+    <hr>
+    <form>
+      <div class="form-group row">
+        <div class="col-md-6">
+          <label for="school-name" class="big-label">High School or Equivalent Name</label>
+          <input type="text" id="school-name" placeholder="Enter school name">
+        </div>
+        <div class="col-md-6">
+          <label for="graduation-date" class="big-label">Graduation Date</label>
+          <input type="date" id="graduation-date">
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="school-address" class="big-label">School Address</label>
+        <input type="text" id="school-address" placeholder="Enter address">
+      </div>
+
+      <div class="form-group row">
+        <div class="col-md-6">
+          <label for="city" class="big-label">City</label>
+          <input type="text" id="city" placeholder="Enter city">
+        </div>
+        <div class="col-md-6">
+          <label for="state" class="big-label">State/Province</label>
+          <select id="state">
+              <option value="">Please Select</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="form-group">
+        <label for="country" class="big-label">Country</label>
+        <input type="text" id="country" placeholder="Enter country"><br>
+      </div>
+
+      <div class="form-buttons">
+        <a href="../enroll/enroll.html">
+          <button type="button" class="btn btn-secondary">Back</button>
+        </a>
+        <a href="../enroll/enroll2.html">
+          <button type="button">Next</button>
+        </a>
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>
